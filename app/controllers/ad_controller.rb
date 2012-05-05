@@ -1,0 +1,2 @@
+class AdController < ApplicationController
+end

@@ -1,7 +1,7 @@
 class CreateAds < ActiveRecord::Migration
   def change
     create_table :ads do |t|
-      t.int :userid
+      t.integer :userid
       t.string :title
       t.text :description
       t.string :image

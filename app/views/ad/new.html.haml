@@ -1,3 +1,28 @@
+%script{:type => 'text/javascript'}
+  :plain
+    var successCallback = function(result){
+      coords = result.coords;
+
+      lat = coords.latitude.toString().split('.')[0]
+      lon = coords.longitude.toString().split('.')[0]
+
+      $("#ad_latlon").val("POINT(" + lat + " " + lon + ")")
+      $("input:submit").val("Post Ad").attr("disabled", false)
+
+    }
+
+    var errorCallback = function(){
+      alert("Support This!");
+    }
+
+    if(geo_position_js.init()){
+       geo_position_js.getCurrentPosition(successCallback,errorCallback);
+    }else{
+      alert("Failed to get your location.");
+    }
+
+    $("form.submit").text("Loading").attr("disable", true)
+
 = form_for @ad, :url => "/ad", :method => "post" do |form|
   %div
     = form.label :title
@@ -9,4 +34,6 @@
     = form.label :image
     = form.file_field :image
   %div
-    = submit_tag "Post Ad"
+    = form.hidden_field :latlon
+  %div
+    = submit_tag "Loading", :disabled => "true"

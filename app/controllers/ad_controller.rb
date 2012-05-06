@@ -1,5 +1,24 @@
 class AdController < ApplicationController
 
+  before_filter :authenticate_user!
+
+  def index
+    @ads = Ad.all(:conditions => ["UPPER(title) like UPPER(?)", "%#{params[:title]}%"])
+    ads_hash = []
+    @ads.each do |ad|
+      ads_hash << {
+        :title => ad.title,
+        :description => ad.description,
+        :user_email => "test@test.com",
+        :image_url => ad.image.url,
+        :latitude => ad.latitude,
+        :longitude => ad.longitude
+      }
+    end
+
+    render json: ads_hash
+  end
+
   def show
     @ad = Ad.find(params[:id])
   end
@@ -11,11 +30,17 @@ class AdController < ApplicationController
   def create
 
     model = params[:ad]
-    ad = Ad.new(params[:ad])
-   if ad.save
-    redirect_to "/ad/#{ad.id}", :notice => "Ad created successfully"
+    ad = Ad.new(model)
+    ad.user = current_user
+    if ad.save
+      render json: {
+        :title => ad.title,
+        :description => ad.description,
+        :user_email => ad.user.email,
+        :image_url => ad.image.url
+      }
    else
-    render :notice => "Ad NOT created successfully"
+      throw 'Failed to create Ad'
    end
   end
 

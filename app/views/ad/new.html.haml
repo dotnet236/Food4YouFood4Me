@@ -65,6 +65,13 @@
     padding: 5px;
     vertical-align:top;
   }
+  #header {
+    width:100%;
+    background: rgba(64, 64, 64, 1);
+  }
+  #header img {
+    margin: 10px;
+  }
   #modal {
     width:720px;
     padding: 10px;
@@ -120,12 +127,14 @@
     background: url(/assets/want-tab-normal.png);
     margin-left: 5px;
     margin-right: 5px;
+    cursor:pointer;
   }
   #tab2{
     float: left;
     background: url(/assets/have-tab-active.png);
     width: 190px;
     height:43px;
+    cursor:pointer;
   }
   .clear {
     clear:both;
@@ -162,7 +171,9 @@
         message: $('#modal'),
         bindEvents: false,
         css: {
-          width: '500',
+          width: '720px',
+          left: '30%',
+          top:'30%',
           background: 'transparent',
           border: 'none'
         },
@@ -190,6 +201,9 @@
     });
 
 #googleMap{:style => "z-index:0; height:100%;width:100%;display:none;"}
+
+#header
+  %img{:src=>'/assets/logo.png'}
 
 #modal.hide
   #tab1

@@ -59,7 +59,7 @@ $(function() {
           .html('')
           .append("<br/>")
           .append(theirProduct)
-          .append("<label>I'll trade you</label>")
+          .append("<label> I'll trade you:</label>")
           .append("<br/>")
           .append(yourQuantity)
           .append("<br/>")

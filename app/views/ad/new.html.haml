@@ -117,6 +117,10 @@
   .ad td {
     text-align: left;
   }
+  #showAd td {
+    text-align: left;
+  }
+
   .ad table {
     width: 100%;
   }
@@ -243,7 +247,6 @@
       $("#ad_latitude").val(lat)
       $("#ad_longitude").val(lon)
       $("input:submit").attr("disabled", false)
-
     }
 
     var errorCallback = function(){
@@ -293,7 +296,7 @@
       $("#tab1").click(function(){
         $("#tab1").addClass('active');
         $("#tab2").removeClass('active');
-        $("#showAd").hide
+        $("#showAd").hide();
         $("#new_ad").hide();
         $("#searchAd").show();
       });

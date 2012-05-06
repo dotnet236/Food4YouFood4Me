@@ -1,0 +1,276 @@
+* {
+  margin:0; /* for sticky footer */
+}
+html, body {
+	height: 100%; /* for sticky footer */
+}
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0; padding:0;
+}
+body {
+  font:100% arial, sans-serif;
+  margin:0; padding:0;
+}
+img, object, embed {
+  max-width:100%;
+}
+.head {
+  background: url("/assets/head-bg.gif") repeat-x scroll left top #000000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  height: 60px;
+}
+.head h1 {
+  background:transparent url(/assets/venuespot-logo.png) no-repeat left top;
+  display:block;
+  height:40px;
+  width:184px;
+  position:absolute;
+  top:6px;
+  text-indent:-9999px;
+  margin:0;
+}
+.head-inner {
+  margin:0 auto;
+  overflow:hidden;
+  width:1140px;
+}
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+  width: 100%;
+}
+.callout {
+  background:#000;
+  background:rgba(0,0,0,.6);
+  margin-top:50px;
+  padding:20px;
+}
+.callout-inner {
+  margin:0 auto;
+  overflow:hidden;
+  padding:25px 0;
+  position:relative;
+  width:1140px;
+}
+.callout-inner h2 {
+  color:#fff;
+  font-family:'Droid Sans', serif;
+  font-size:2.85em;
+  letter-spacing:-0.5px;
+  margin:0 0 40px 0;
+  text-shadow:1px 1px 0 rgba(0,0,0,.6);
+}
+.callout-inner h2 span {
+  color:#fedb40;
+}
+.callout-inner .left {
+  float:left;
+  width:650px;
+}
+.callout-inner p {
+  color:#b2b2b2;
+  font-family:arial, serif;
+  font-size:18px;
+  line-height:22px;
+  margin:0;
+}
+.callout-inner ul {
+  margin:40px 0 0 0;
+  padding:0;
+  list-style:none;
+}
+.callout-inner li {
+  float:left;
+  margin-right:40px;
+}
+.callout-inner li span {
+  background:transparent url(/assets/ic-loc.png) no-repeat;
+  display:block;
+  float:left;
+  height:25px;
+  width:19px;
+  margin-right:10px;
+}
+.callout-inner li a {
+  color:#f4d548;
+  font-size:18px;
+  line-height:25px;
+  text-decoration:none;
+}
+.callout-inner li a:hover {
+  text-decoration:underline;
+}
+a.get-started, input.find-venue {
+  background:#febc00 url(/assets/btn-bg.gif) repeat-x left top;
+  border:10px solid #252525;
+  color:#6c4701;
+  font-size:26px;
+  font-weight:bold;
+  padding:20px;
+  margin-bottom:25px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  text-decoration:none;
+  text-shadow:0 1px 0 rgba(255,255,255,.6);
+  -webkit-border-radius:5px; /* Saf3+, Chrome */
+  -moz-border-radius:5px; /* FF1+ */
+  border-radius:5px; /* Opera 10.5, IE 9 */
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+input.find-venue {
+  clear:both;
+  cursor:pointer;
+  display:inline-block !important;
+  border:1px solid #d2b144;
+  display:block;
+  font-size:18px;
+  margin:0 auto;
+  padding:10px;
+  position:relative;
+}
+.callout-inner a.get-started:hover, input.find-venue:hover {
+  background:#f1bf25;
+}
+.footer {
+  background:#000;
+}
+.footer, .push {
+	height: 40px; /* .push must be the same height as .footer */
+}
+.footer-inner {
+  width:1140px;
+  margin:0 auto;
+  line-height:40px;
+}
+.footer-inner p {
+  color:#b2b2b2;
+  font-size:12px;
+  letter-spacing:-0.5px;
+}
+.step-wizard {
+  max-width:560px;
+  margin:0 auto;
+  margin-top:0px;
+  padding:10px;
+}
+.step-wizard.step-1 {
+  max-width:560px !important;
+}
+.step-wizard.step-2 {
+  width:520px !important;
+}
+.step-wizard h3 {
+  color:#fff;
+  font-family:'Droid Sans', serif;
+  font-size:26px;
+  text-shadow:1px 1px 0 #000;
+}
+.step-wizard span {
+  color:#fedb40;
+}
+.overlay {
+  background:#fff;
+  max-width:525px;
+  border-radius:8px;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,.8);
+  -moz-box-shadow:0 0 10px rgba(0,0,0,.8);
+  -webkit-box-shadow:0 0 10px rgba(0,0,0,.8);
+  margin:0 auto;
+  padding:25px;
+  position:relative;
+}
+.overlay img.close {
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  cursor:pointer;
+}
+.overlay ul {
+  border-bottom:1px solid #d9d9d9;
+  list-style:none;
+  overflow:hidden;
+  padding:0;
+}
+.overlay li {
+  float:left;
+  padding:30px;
+  position:relative;
+  width:200px;
+}
+.overlay li:first-child {
+  border-right:1px solid #d9d9d9;
+}
+.overlay li a {
+  display:block;
+}
+.overlay li img.fb {
+  top:40px;
+}
+.overlay .no-decoration {
+  border-bottom:none;
+}
+.overlay.step-2 {
+  padding:0;
+}
+.overlay .venue-form {
+  overflow:hidden;
+  padding:25px;
+}
+.venue-form label {
+  color:#5a5a5a;
+  display:block;
+  font-family:arial, serif;
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+.venue-form input[type=text], select {
+  background:#f7f7f7;
+  border:1px solid #c8c8c8;
+  color:#8c8c8c;
+  padding:10px;
+  font-size:14px;
+  font-style:italic;
+  margin-bottom:20px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+}
+.venue-form input#location {
+  width:220px;
+  margin-right:23px;
+}
+.venue-form select#state {
+  width:205px;
+}
+.venue-form select#category, select#food {
+  width:475px;
+}
+.venue-form select#food {
+  margin-bottom:0 !important;
+}
+.venue {
+  background:#eee;
+  border-top:1px solid #e4e4e4;
+  margin:0;
+  padding:10px 0;
+  text-align:center;
+  width:525px !important;
+  border-radius:0 0 5px 5px;
+  -webkit-border-radius:0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  box-shadow: inset 0 1px 0 #fff;
+  -moz-box-shadow:inset 0 1px 0 #fff;
+  -webkit-box-shadow:inset 0 1px 0 #fff;
+}

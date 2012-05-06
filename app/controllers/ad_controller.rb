@@ -11,18 +11,7 @@ class AdController < ApplicationController
   def create
 
     model = params[:ad]
-    ad = Ad.new()
-    ad.title = model[:title]
-    ad.description = model[:description]
-    ad.image = model[:image]
-
-    puts 'THIS IS THE COMMENT'
-    factory = RGeo::Geographic.spherical_factory
-    point = factory.point(-122.33, 47.62)
-    puts point
-    ad.latlon = point
-    puts ad.latlon
-
+    ad = Ad.new(params[:ad])
    if ad.save
     redirect_to "/ad/#{ad.id}", :notice => "Ad created successfully"
    else
